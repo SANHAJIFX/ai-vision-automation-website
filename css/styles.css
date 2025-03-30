@@ -1,0 +1,249 @@
+/* 
+* VisionAI - Intelligent Automation Solutions
+* Main Stylesheet
+*/
+
+:root {
+    /* Primary colors */
+    --primary-color: #3f6fff;
+    --primary-light: #7495ff;
+    --primary-dark: #0044cc;
+    
+    /* Secondary colors */
+    --secondary-color: #00c7b1;
+    --secondary-light: #4dffd8;
+    --secondary-dark: #00957f;
+    
+    /* Background colors */
+    --dark-bg: #0a192f;
+    --dark-bg-light: #112240;
+    --light-bg: #f8f9fa;
+    --gradient-bg: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+    
+    /* Text colors */
+    --text-light: #f8f9fa;
+    --text-dark: #131b2e;
+    --text-muted: #6c757d;
+    
+    /* Fonts */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    
+    /* Spacing */
+    --section-spacing: 100px;
+    --card-spacing: 30px;
+    
+    /* Shadows */
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --hover-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --btn-shadow: 0 5px 15px rgba(63, 111, 255, 0.2);
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+.section-subtitle {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-description {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.section-header {
+    margin-bottom: 4rem;
+}
+
+.text-gradient {
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: var(--btn-shadow);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(63, 111, 255, 0.3);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-lg {
+    padding: 0.8rem 2rem;
+    font-size: 1.05rem;
+}
+
+/* Navigation */
+.navbar {
+    padding: 1.5rem 0;
+    transition: all 0.4s ease;
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+    background-color: var(--dark-bg);
+    padding: 0.7rem 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-heading);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, 
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding: 0;
+}
+
+.logo-text {
+    letter-spacing: 1px;
+}
+
+.dropdown-menu {
+    background-color: var(--dark-bg-light);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.dropdown-item {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    padding: 0.7rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(63, 111, 255, 0.1);
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-bg);
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    color: var(--text-light);
+    padding: 9rem 0 5rem;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    margin-bottom: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.75));
+    z-index: 1;
+}
